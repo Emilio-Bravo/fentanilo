@@ -4,11 +4,19 @@
 }
 */
 
+:root {
+  --secondary-green: #7bab30;
+}
+
 .navbar,
 footer {
   background: linear-gradient(to right, #fff, #e1e1e1, #f5f5f5);
-  border-bottom: 3px solid #7bab30;
-  border-top: 3px solid #7bab30;
+  border-bottom: 3px solid var(--secondary-green);
+  border-top: 3px solid var(--secondary-green);
+}
+
+header {
+  border: 3px solid var(--secondary-green);
 }
 
 .nav-link-content {
@@ -39,5 +47,25 @@ footer {
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes progression {
+  0% {
+    transition: 200ms;
+    border:3px solid var(--secondary-green);
+  }
+
+  25% {
+    border:3px solid #9dff00;
+  }
+
+  75% {
+    border:3px solid #6c8f34;
+  }
+
+  100% {
+    border:3px solid #aae64b;
+    transition: 200ms;
   }
 }
